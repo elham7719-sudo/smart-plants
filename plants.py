@@ -24,7 +24,7 @@ if image_file is not None:
     if st.button("تحليل النبتة ومعرفة الفوائد ✨"):
         with st.spinner('جاري التحليل...'):
             try:
-                model = genai.GenerativeModel('gemini-2.5-flash')
+                model = genai.GenerativeModel('gemini-1.5-flash')
                 prompt = "تعرف على هذه النبتة واذكر اسمها العلمي، فوائدها الطبية، ووصفة لاستخدامها."
                 response = model.generate_content([prompt, img])
                 st.success("النتيجة:")
